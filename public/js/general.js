@@ -2,7 +2,9 @@ $(() => {
   $('.tooltipped').tooltip({ delay: 50 })
   $('.modal').modal()
 
-  firebase.initializeApp(varConfig)
+  //firebase.initializeApp(varConfig)
+
+  const app = initializeApp(firebaseConfig);
 
   // Se registra el service worker
   navigator.serviceWorker
@@ -144,4 +146,14 @@ $(() => {
       Materialize.toast(`Debes estar autenticado para ver tus posts`, 4000)
     }
   })
+
+  const varConfig = {
+    apiKey: "AIzaSyAXYHTPwmtXEDB7aJj1Nr87IUgJVx3ja-M",
+    authDomain: "megatone-93d04.firebaseapp.com",
+    projectId: "megatone-93d04",
+    storageBucket: "megatone-93d04.appspot.com",
+    messagingSenderId: "485713108554",
+    appId: "1:485713108554:web:f7f9a341808825de3010b3",
+    measurementId: "G-66NTX7ZTQX"
+  };
 })
