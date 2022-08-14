@@ -5,7 +5,9 @@ $(() => {
     const nombres = $('#nombreContactoReg').val()
     const email = $('#emailContactoReg').val()
     const password = $('#passwordReg').val()
+    const auth = Autenticacion()
     auth.crearCuentaEmailPass(email, password, nombres)
+   
   })
 
   $('#btnInicioEmail').click(() => {

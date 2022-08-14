@@ -26,16 +26,17 @@ class Autenticacion {
         })
 
         const configuracion = {
-          url: 'https://blogeekplatzi-4836b.firebaseapp.com/'
+          url: 'https://localhost:3000/'
         }
 
         result.user.sendEmailVerification(configuracion).catch(error => {
           console.error(error)
           Materialize.toast(error.message, 4000)
         })
-
+          //Firebase crear un LoginOut
         firebase.auth().signOut()
 
+          //Mensaje de Bievenida
         Materialize.toast(
           `Bienvenido ${nombres}, debes realizar el proceso de verificación`,
           4000
